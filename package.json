@@ -27,7 +27,7 @@
   },
 	"scripts": {
 		"prepare": "husky install",
-		"build": "rm -rf dist && tsc && jq 'del(.scripts.prepare) | .main = \"src/index.js\" | .bin.\"create-buttonize\" = \"./bin/create-buttonize.js\"' package.json > dist/package.json && cp LICENSE dist && cp -r presets dist",
+		"build": "rm -rf dist && tsc && jq 'del(.scripts.prepare) | .main = \"src/index.js\" | .bin.\"create-buttonize\" = \"./bin/create-buttonize.js\"' package.json > dist/package.json && cp LICENSE dist && cp README.md dist && cp -r presets dist",
 		"build:watch": "tsc --watch",
 		"lint": "eslint 'src' 'bin' --quiet --ext .ts,.tsx,.cjs,.mjs,.js,.jsx",
 		"lint:fix": "pnpm run lint --fix",
