@@ -110,7 +110,9 @@ export async function execute(opts: {
 				for (const file of files) {
 					const relative = path.relative(
 						templates,
-						file.replace('gitignore', '.gitignore')
+						file
+							.replace('gitignore', '.gitignore')
+							.replace('npmignore', '.npmignore')
 					)
 					const destination = path.join(opts.destination, relative)
 					await fs.mkdir(path.dirname(destination), { recursive: true })
