@@ -1,0 +1,75 @@
+{
+  "name": "create-buttonize",
+  "version": "0.0.1",
+  "homepage": "https://buttonize.io",
+  "description": "Create Buttonize example app",
+	"license": "MIT",
+  "main": "./dist/src/index.js",
+	"type": "module",
+  "bin": {
+    "create-buttonize": "./dist/bin/create-buttonize.js"
+  },
+	"author": {
+		"name": "Buttonize",
+		"url": "https://buttonize.io",
+		"organization": "Buttonize"
+	},
+  "repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/buttonize/create-buttonize.git"
+	},
+	"bugs": {
+		"url": "https://github.com/buttonize/create-buttonize/issues"
+	},
+  "publishConfig": {
+    "access": "public",
+		"directory": "dist"
+  },
+	"scripts": {
+		"prepare": "husky install",
+		"build": "rm -rf dist && tsc && jq 'del(.scripts.prepare) | .main = \"src/index.js\" | .bin.\"create-buttonize\" = \"./bin/create-buttonize.js\"' package.json > dist/package.json && cp LICENSE dist && cp -r presets dist",
+		"build:watch": "tsc --watch",
+		"lint": "eslint 'src' 'bin' --quiet --ext .ts,.tsx,.cjs,.mjs,.js,.jsx",
+		"lint:fix": "pnpm run lint --fix",
+		"typecheck": "tsc --noEmit"
+	},
+	"keywords": [
+		"aws",
+		"buttonize",
+		"serverless"
+	],
+	"engines": {
+		"node": ">= 20"
+	},
+	"lint-staged": {
+		"{src,bin}/**/*.{ts,tsx,js,jsx,mjs,cjs}": "eslint --quiet --fix"
+	},
+  "dependencies": {
+    "cli-spinners": "^2.6.1",
+    "commander": "^9.1.0",
+    "fast-json-patch": "^3.1.1",
+    "inquirer": "^8.2.2",
+    "node-fetch": "3.2.10",
+    "ora": "^6.1.0",
+    "patch-package": "^6.5.1",
+    "undici": "^5.9.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.2",
+    "@types/inquirer": "^8.2.1",
+    "@types/node": "^20.11.19",
+		"semantic-release": "^23.0.2",
+		"@commitlint/cli": "^18.6.1",
+		"@commitlint/config-conventional": "^18.6.2",
+		"@typescript-eslint/eslint-plugin": "^7.0.2",
+		"@typescript-eslint/parser": "^7.0.2",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.3",
+		"eslint-plugin-simple-import-sort": "^12.0.0",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"prettier": "^3.2.5",
+		"typescript": "^5.3.3"
+  }
+}

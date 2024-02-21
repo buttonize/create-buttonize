@@ -1,0 +1,24 @@
+{
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+  "files.associations": {
+    "*.env": "ini"
+  },
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "eslint.format.enable": true,
+  "editor.formatOnSave": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+	"prettier.ignorePath": ".eslintignore",
+	"prettier.useEditorConfig": true,
+	"npm.packageManager": "pnpm"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@@app",
+  "version": "0.0.0",
+  "bin": {
+    "cdk-app": "bin/app.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
