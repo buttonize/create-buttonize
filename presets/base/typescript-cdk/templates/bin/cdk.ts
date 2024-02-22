@@ -5,7 +5,7 @@ import * as cdk from 'aws-cdk-lib'
 
 import { ExampleStack } from '../lib/example-stack'
 
-const app = new cdk.App()
+export const app = new cdk.App()
 new ExampleStack(app, 'ExampleStack', {
 	/* If you don't specify 'env', this stack will be environment-agnostic.
 	 * Account/Region-dependent features and context lookups will not work,
