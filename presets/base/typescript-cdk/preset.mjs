@@ -8,7 +8,8 @@ export default [
 			'aws-cdk',
 			'ts-node',
 			'typescript',
-			'buttonize'
+			'buttonize',
+			'esbuild'
 		],
 		dev: true
 	}),

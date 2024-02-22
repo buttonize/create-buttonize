@@ -14,7 +14,7 @@ export class ExampleStack extends cdk.Stack {
 		})
 
 		const discountGenerator = new NodejsFunction(this, 'DiscountGenerator', {
-			entry: path.join(__dirname, '../', 'discountGenerator.ts')
+			entry: path.join(__dirname, '../', 'src', 'discountGenerator.ts')
 		})
 
 		new ButtonizeApp(this, 'DemoApp', {
