@@ -30,7 +30,7 @@ There's no need install this CLI. Just use it directly to create your projects.
 With npx
 
 ```bash
-npx create-buttonize@latest
+npx create-buttonize
 ```
 
 Or with npm 6+
@@ -62,7 +62,15 @@ Pass in the following (optional) options.
 Instead of the standard starter, you can choose from multiple examples.
 
 ```bash
-npx create-buttonize@latest --template=examples/discount-code-generator
+npx create-buttonize --template=examples/discount-code-generator
+```
+
+### `--api-key`
+
+API Key to be pre-filled in the project.
+
+```bash
+npx create-buttonize --api-key=btnz_mybuttonizekey1234567
 ```
 
 ---
@@ -74,7 +82,7 @@ npx create-buttonize@latest --template=examples/discount-code-generator
 Specify a project name, instead of typing it into the interactive prompt.
 
 ```bash
-npx create-buttonize@latest my-buttonize-app
+npx create-buttonize my-buttonize-app
 ```
 
 ---

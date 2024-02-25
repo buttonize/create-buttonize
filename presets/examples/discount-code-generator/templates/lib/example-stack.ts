@@ -9,7 +9,7 @@ export class ExampleStack extends cdk.Stack {
 		super(scope, id, props)
 
 		Buttonize.init(this, {
-			apiKey: 'btnz_mybuttonizekey1234567',
+			apiKey: '@@apiKey',
 			externalId: 'CHANGE-ME-some-random-external-id'
 		})
 

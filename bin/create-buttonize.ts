@@ -13,6 +13,7 @@ program
 	.name('create-buttonize')
 	.description('CLI to create Buttonize example apps')
 	.option('--template <template>', 'Use a specific template')
+	.option('--api-key <api-key>', 'Pre-fill API Key in the template')
 	.argument('[name]', 'The name of your project')
 	.action(async (argumentName, opts) => {
 		const cwd = process.cwd()
@@ -67,7 +68,10 @@ program
 			await execute({
 				source: preset,
 				destination,
-				parameters: parameters ?? {}
+				parameters: {
+					apiKey: opts.apiKey ?? 'btnz_mybuttonizekey1234567',
+					...(parameters ?? {})
+				}
 			})
 			spinner.succeed('Copied template files')
 			console.log()
