@@ -32,7 +32,7 @@ export class ExampleStack extends cdk.Stack {
 							{ label: '60%', value: 60 }
 						]
 					}),
-					Display.button({
+					Input.button({
 						label: 'Generate discount',
 						onClick: Action.aws.lambda.invoke(
 							discountGenerator,
