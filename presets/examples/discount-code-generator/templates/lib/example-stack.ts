@@ -46,7 +46,7 @@ export class ExampleStack extends cdk.Stack {
 			.page('DonePage', {
 				body: [
 					Display.heading('Discount generated'),
-					Display.text('Discount code: {{InputPage.discountGenerator.code}}')
+					Display.text('Discount code: {{discountGenerator.code}}')
 				]
 			})
 	}
