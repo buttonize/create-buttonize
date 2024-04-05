@@ -36,7 +36,7 @@ export class ExampleStack extends cdk.Stack {
 						label: 'Generate discount',
 						onClick: Action.aws.lambda.invoke(
 							discountGenerator,
-							{ Payload: { discountValue: '{{discount}}' } },
+							{ Payload: { discountValue: '{{discount.value}}' } },
 							{ id: 'discountGenerator' }
 						),
 						onClickFinished: Action.buttonize.app.changePage('DonePage')
