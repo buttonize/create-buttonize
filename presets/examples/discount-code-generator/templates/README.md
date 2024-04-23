@@ -8,7 +8,9 @@
 
 ## Discount code generator
 
-TODO
+[![Discount code generator](https://github.com/buttonize/create-buttonize/assets/6282843/f765c974-b1bd-42c1-b382-b11f1dec7036)](https://docs.buttonize.io/getting-started/build-your-first-app/)
+
+Read more in the [Docs](https://docs.buttonize.io/getting-started/build-your-first-app/)
 
 ## CDK
 
