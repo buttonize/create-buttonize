@@ -25,7 +25,6 @@ export class ExampleStack extends cdk.Stack {
 			engine: DatabaseInstanceEngine.POSTGRES,
 			vpc: defaultVpc,
 			instanceType: InstanceType.of(InstanceClass.T4G, InstanceSize.MICRO),
-			removalPolicy: cdk.RemovalPolicy.DESTROY,
 			instanceIdentifier: 'my-little-test-buttonize-db',
 			vpcSubnets: {
 				subnetType: SubnetType.PUBLIC // Publicly accessible instance
